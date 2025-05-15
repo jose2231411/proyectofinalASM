@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitios Turísticos de Cali</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="imgStyles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Sitios Turísticos de Santiago de Cali</h1>
+        <p class="subtitle">Que hacer en la Sucursal del cielo</p>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+
+            <div class="predefined-searches">
+                <button class="predefined-btn" data-site="tres-cruces">Tres Cruces</button>
+                <button class="predefined-btn" data-site="san-antonio">San Antonio</button>
+                <button class="predefined-btn" data-site="rio-cali">Río Cali</button>
+                <button class="predefined-btn" data-site="todos">Todos los sitios</button>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div id="results-container">
+            <h2>Resultados de la búsqueda</h2>
+            <div id="results-list"></div>
+        </div>
+        
+        <div id="info-card" class="info-card">
+            <div class="card-header">
+                <h2 id="card-title">Título del sitio</h2>
+                <p id="card-subtitle">Subtítulo del sitio</p>
+                <button class="close-btn" onclick="closeCard()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="card-body" id="card-body">
+   
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Proyecto ASM</p>
+
+        </div>
+    </footer>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>

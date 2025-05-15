@@ -1,0 +1,62 @@
+/* General: todas las imágenes dentro de contenedores */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Miniaturas en la lista de resultados */
+.result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;  /* Centra el texto y los botones */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo de las miniaturas en la lista de resultados */
+.result-image {
+    width: 250px;          /* Ancho fijo */
+    height: 160px;         /* Alto fijo */
+    object-fit: cover;     
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+}
+
+
+/* Imagen grande en la tarjeta de detalles */
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Video responsive */
+.video-container iframe {
+    width: 100%;
+    height: 315px; /* Puedes ajustar para móviles con media queries */
+    border: none;
+    border-radius: 12px;
+}
+@media (max-width: 600px) {
+    .result-image {
+        max-width: 100%;
+    }
+
+    .image-container img,
+    .video-container iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
+}
